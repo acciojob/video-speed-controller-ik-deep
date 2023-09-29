@@ -16,6 +16,25 @@
 
 <script  src="./script.js">
   //Your code goes here
+	
+const video = document.querySelector('.flex');
+const progress = document.querySelector('.progress');
+const progressBar = document.querySelector('.progress__filled');
+const playButton = document.querySelector('.player__button');
+const volumeSlider = document.querySelector('.player__slider[name="volume"]');
+const playbackSpeedSlider = document.querySelector('.player__slider[name="playbackRate"]');
+const skipButtons = document.querySelectorAll('[data-skip]');
+const speedBar = document.querySelector('.speed-bar');
+
+// Function to toggle play/pause
+function togglePlay() {
+  if (video.paused) {
+    video.play();
+    playButton.textContent = '❚ ❚';
+  } else {
+    video.pause();
+    playButton.textContent = '►';
+  }
 </script>
 </body>
 </html>
